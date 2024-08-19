@@ -15,6 +15,11 @@ class Tamagotchi{
         console.log(`My mood is: ${this.mood}\nI am this full: ${this.full}\nMy energy is: ${this.energy}`);
         this.energy ? console.log(`I am not sick`) : console.log(`I am sick`);
     }
+    eat(){
+        this.full += 2;
+        this.energy--;
+        this.full > 10 ? this.sick = true : this.sick = false;
+    }
 
 }
 
