@@ -73,7 +73,7 @@ class Tamagotchi{
 
 const myTamagotchi = new Tamagotchi('Fido');
 console.log(myTamagotchi);
-myTamagotchi.status();
+myTamagotchi.eat();
 
 // Do not edit below this line
 module.exports = Tamagotchi;
