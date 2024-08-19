@@ -24,13 +24,27 @@ class Tamagotchi{
         if (this.sick === false) {
             console.log(`refusal to take medicine`)
             this.energy--;
-        }
-        else {
-        this.full = 9;
-        this.energy -= 3;
+        } else {
+            this.full = 9;
+            this.energy -= 3;
         }
     }
-
+    play(){
+        if(this.sick === true){
+            console.log(`I am sick I will not play.`);
+            this.mood--;
+            this.energy--;
+        }
+        if(this.mood > 9){
+            console.log(`I am busy I will not play.`);
+            this.energy -= 2;
+            this.full++;
+        }
+        if(this.mood <= 3){
+            console.log(`I am too tired to play.`);
+            this.energy--;
+        }
+    }
 }
 
 const myTamagotchi = new Tamagotchi('Fido');
