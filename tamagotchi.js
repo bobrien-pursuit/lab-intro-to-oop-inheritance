@@ -49,11 +49,30 @@ class Tamagotchi{
         this.full -= 3;
         this.energy += 4;
     }
-    
+    timePasses(){
+        if (this.sick === false) {
+            this.mood -= 2;
+            this.full--;
+            this.energy--;
+        } else {
+            this.mood -= 3;
+            this.full -= 2;
+            this.energy -= 2;
+        }
+    }
+    badGuardian(){
+        console.log(`You\'re fired!`)
+        if (this.energy < 0)
+            this.rehomed = true;
+        else if(this.mood < 0)
+            this.rehomed = true;
+        else if(this.full <= true)
+            this.rehomed = true;
+    }
 }
 
 const myTamagotchi = new Tamagotchi('Fido');
-
+console.log(myTamagotchi);
 myTamagotchi.status();
 
 // Do not edit below this line
